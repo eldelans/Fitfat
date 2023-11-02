@@ -1,0 +1,1167 @@
+/*======== Barra de navegación ===============*/
+*{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+header{
+position: sticky;
+top: 0;
+z-index: 1000;
+
+}
+
+nav {
+    background: #EDEAF5;
+    display: flex;
+    position: relative;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+/* Estilos para el efecto de reflexión */
+nav::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #333;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease-in-out;
+}
+
+/*======ESTILO PARA EL FOOTER Y MAIN======*/
+footer{
+    background: #EDEAF5;
+    position: relative;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+main{
+    background: linear-gradient(to right, rgb(235, 226, 211),rgb(200, 183, 209));
+    padding: 1rem 0;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+
+/*====== INDEX =======*/
+
+section.container_inicio{    
+    
+    display: flex;        
+    justify-content: center;
+}
+
+.cIni_txt{
+    display: flex;
+    background-image: url(https://www.clarin.com/img/2016/08/26/rJrso1aFNe_1256x620.jpg);
+    background-size: cover; /* Ajusta la imagen para cubrir todo el cuadro de texto */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */    
+    width: 80%;
+    padding: 4rem;
+    max-height: 100%;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center; /* Para centrar verticalmente el texto */    
+}
+
+.cIni_txt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%; /* Cubre la mitad derecha del contenedor */
+    background: linear-gradient(to right, transparent, rgba(86 55 99 / 80%)); /* Aplicamos el fondo difuminado */
+    
+}
+
+.container_masinfo_title{
+    
+    font-style: italic;
+    margin-right: 40px;
+    font-size: 60px;
+    max-width: 100%; 
+    
+}
+
+.container_masinfo_btn{
+    background: #6b469e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+section.ini_mid_btns{
+    
+    display: flex;        
+    justify-content: center;
+}
+
+.ini_btns{
+    background-color: rgb(142, 142, 192);
+    box-shadow: 0px 0px 55px 5px rgba(160, 112, 112, 0.5);    
+    
+    display: flex; 
+    width: 80%;
+    padding: 1rem;
+    max-height: 100%;     
+    align-items: center; /* Para centrar verticalmente el texto */    
+    justify-content: center;
+    margin:2rem;
+}
+
+/*================ BENEFICIOS =======================*/
+/*===GUIA NUTRICIONAL===*/
+
+section.containerB_nutri{    
+    justify-content: center;     
+    padding: 1rem 0;    
+    display: flex;
+}
+
+.B_nutri-content{
+    width: 80%;    
+    display: flex; /* Usar display: flex para alinear elementos en línea */
+    flex-wrap: wrap; /* Permite que los elementos se coloquen en una nueva línea cuando no haya suficiente espacio horizontal */
+    background: linear-gradient(to left, rgb(204, 193, 175),rgb(204, 195, 209));    
+      
+}
+
+.B_nutri-txt {
+    flex: auto;  /* Ancho automático */
+
+    color: #666;
+    font-size: 18px;
+    text-align: center;
+    padding: 2rem  ;        
+    margin: 2rem;
+    background: linear-gradient(to left, rgb(211, 176, 115), rgb(185, 184, 167));
+    border-radius: 25px;
+
+    overflow: auto; /* Permite desplazamiento vertical si el contenido excede la altura */
+}  
+   
+
+.B_nutri-content h2 {
+    color: black; 
+}
+
+.B_nutri-content h3 {
+    color: #4b3763;
+    font-size: 20px;
+    margin-top: 10px;
+}
+    
+.B_nutri-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+  
+.B_nutri-content li {
+    color: #333;
+    list-style: none;
+}
+    
+.B_nutri-content p {
+    font-style: italic;
+    font-weight: bold;
+    color: #555;
+}
+
+.B_nutri-img{    
+    max-height: 400px; /* Establece una altura máxima para limitar el crecimiento del contenido */   
+    flex: 3;
+    
+    
+    display: flex;
+
+    justify-content: center;
+    width: auto;   
+           
+    margin: 2rem;
+    padding: 2rem ;        
+    border-radius: 20%;   
+ 
+}
+
+.B_nutri-img img{    
+    border-radius: 15%;   
+    width: 90%;     
+}
+
+/*===CONTADOR CARBOHIDRATOS===*/
+section.containerB_carbo{
+    justify-content: center;     
+    padding: 1rem 0;
+    display: flex;
+}
+
+.B_carbo-content{
+    width: 80%;    
+    display: flex; /* Usar display: flex para alinear elementos en línea */
+    flex-wrap: wrap; /* Permite que los elementos se coloquen en una nueva línea cuando no haya suficiente espacio horizontal */
+    background: linear-gradient(to left, rgb(204, 193, 175),rgb(204, 195, 209));    
+    
+}
+
+.B_carbo-img{   
+    max-height: 400px;
+    flex:3;
+    
+    display: flex;    
+    
+    width: auto;
+    justify-content: center;
+
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.B_carbo-img img{    
+    border-radius: 15%;   
+    width: 90%;
+
+}
+
+.B_carbo-txt{
+    flex:auto;
+
+    background: linear-gradient(to left, rgb(165, 201, 175),rgb(189, 216, 216));
+    padding: 2rem;
+    margin: 2rem;     
+    border-radius: 25px;        
+
+    color: #666;
+    font-size: 18px;
+    text-align: center;    
+    
+    overflow: auto;
+}  
+
+.B_carbo-content h2 {    
+    color: black;  
+}
+    
+.B_carbo-content h3 {
+    color: #4b3763;
+    font-size: 20px;
+    margin-top: 10px;
+}
+    
+.B_carbo-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+  
+.B_carbo-content li {
+    color: #333;
+}
+    
+.B_carbo-content p {
+    font-style: italic;
+    font-weight: bold;
+    color: #555;
+}
+
+/*================ NOSOTROS =======================*/
+
+section.containerN_about{
+    background: linear-gradient(to left, rgb(214, 164, 188),rgb(234 243 240));
+    padding: 3rem 0;
+
+}
+
+.N_about-content{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));      
+}
+
+.boxN-img{
+    background: linear-gradient(to left, rgb(57, 70, 185),rgb(234 243 240));
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.boxN-img img{
+    width: 50%;
+}
+
+/* Centrar el contenido en el centro de la página */
+.center-content {
+    text-align: center;
+}
+
+/* Estilizar el contenedor de testimonio */
+.testimonial-container {    
+    margin: 0 auto;
+    max-width: 600px; 
+}
+
+img{
+    border-radius: 10px;
+}
+
+.boxN-txt{
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 55px 5px rgba(160, 112, 112, 0.5);    
+}
+
+.btnBanner{
+    background: #D052D2;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+
+/*================ INGRESA =======================*/
+
+section.banner{
+    background: linear-gradient(to left,rgb(255 255 255), rgb(234 243 240) );
+    padding: 3rem 0;
+}
+
+.containerR{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.cR-imgBanner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cR-imgBanner a img{
+    width: 100%;
+}
+
+.cR-content{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imgRegister{
+    width: 70%;
+    align-items: right;
+}
+
+.cR-content h1{
+    font-size: 2rem;
+    color: #33193e;
+    text-align: center;
+}
+
+/*================ REGISTRO =======================*/
+
+section.registro {
+    background: linear-gradient(to left,rgb(255 255 255), rgb(234 243 240) );
+    padding: 3rem 0;
+    text-align: center;
+    align-items: center;
+}
+
+/*================ PRECIOS =======================*/
+.planes-section {
+    background: #fff; /* Color de fondo */
+    padding: 20px; /* Espaciado interior */
+    margin: 20px; /* Márgenes exteriores */
+    text-align: center; /* Alineación de texto */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.planes-section h4 {
+    color: #333; /* Color de texto del título */
+    font-size: 24px; /* Tamaño del título */
+    margin-top: 0; /* Eliminar margen superior */
+}
+
+.planes-section img {
+    max-width: 20%; /* Imágenes ajustadas al ancho del contenedor */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+}
+
+.planes-section p {
+    color: #666; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    margin-top: 10px; /* Margen superior */
+}
+
+.planes-section button {
+    background-color: #D052D2; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Relleno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño del texto del botón */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición de color al pasar el ratón */
+}
+
+.planes-section button:hover {
+    background-color: #ff3300; /* Cambio de color al pasar el ratón */
+}
+
+/*================ PLANES CONTENIDO =======================*/
+
+.contenido-plan{
+    display: block;
+    font-size: 16px; /* Tamaño del texto */
+    margin: 8px;
+}
+
+.contenido-plan h2{
+    font-size: 24px;
+    margin-bottom: 20px;
+
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.contenido-plan p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.contenido-plan ul{
+    display: block;    
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.contenido-plan ul li{
+    display: list-item;
+    list-style-type: initial;
+      
+}
+
+/*================ PLANES CONTENIDO =======================*/
+
+section.plan_premiun{
+    display: flex;        
+
+    background: linear-gradient(to left,rgb(171, 167, 206), rgb(234 243 240) );
+    padding: 1rem;
+
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container_pPremiun{
+    display: flex;    
+    flex-direction: column;
+    font-size: 16px; /* Tamaño del texto */
+    margin: 8px;
+
+
+    background: linear-gradient(to left,rgb(161, 193, 206), rgb(234 243 240) );
+    padding: 3rem 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+
+.container_pPremiun a{    
+    text-decoration: none;
+    margin: 10px;
+}
+
+.container_pPremiun img{
+    display: block;
+    margin:0;
+}
+
+/*================ DATOS BANCARIOS =======================*/
+.containerBank{
+    width: 100%;
+    text-align: center; 
+}
+
+form {
+    max-width: 400px;
+    margin: 2rem auto; /* Cambia el valor de la izquierda y derecha a "auto" */
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label{
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background: #555;
+}
+
+/*================ PLANBASICO_CONTENIDO=======================*/
+
+/* Estilos del contenido del plan */
+.contenido-plan {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contenido-plan h2 {
+    color: #333;
+}
+
+.contenido-plan p {
+    color: #555;
+}
+
+.contenido-plan ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contenido-plan ul li {
+    margin: 10px 0;
+    color: #333;
+}
+
+.contenido-plan a button {
+    background-color: #D052D2; /* Color de fondo del botón */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.contenido-plan a button:hover {
+    background-color: #555;
+}
+
+/*=============== METODOS DE PAGO=======================*/
+
+/* Estilos generales */
+section.metodPago {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left,rgb(161, 193, 206), rgb(234 243 240) );
+    margin: 0;
+    padding: 1rem;
+}
+
+/* Estilos para el contenedor del formulario */
+.containerBank {
+    width: 100%;
+    text-align: center;
+    margin: 2rem;
+}
+
+/* Estilos para el formulario de checkout */
+.checkout {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.checkout label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.checkout input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkout button {
+    background-color: #D052D2; /* Color de fondo del botón */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.checkout button:hover {
+    background: #555;
+}
+
+/* Estilos para el formulario de pago */
+.checkout button {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para el formulario de envío */
+.checkout select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/*================ DATOS BANCARIOS =======================*/
+.containerBank{
+    width: auto;
+    text-align: center; 
+    background: linear-gradient(to left,rgb(161, 193, 206), rgb(234 243 240) );  
+    padding: 1rem;
+}
+
+.containerBank form {
+    
+    margin: 1rem auto; /* Cambia el valor de la izquierda y derecha a "auto" */
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.containerBank form label{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.containerBank form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.containerBank form button {
+    background-color: #D052D2; /* Color de fondo del botón */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.containerBank form button:hover {
+    background: #555;
+}
+
+/*================ PLAN ALIMENTICIO =======================*/
+section.planAlimenticio{
+    background-color: rgb(216, 238, 236);
+    text-align: center;
+    padding: 2rem;
+}
+
+.containerday-PA{
+    background-color: rgb(200, 208, 212);
+}
+
+.containerday-PA h4{ /* Estilos para los días de la semana */
+    color: #411d2b;
+    margin-top: 40px;
+    font-size: 1.3em;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.containerday-PA h6{ /* Estilos para los nombres de las comidas */
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.containerday-PA img{ /* Estilos para las imágenes */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.containerday-PA ul li{ /* Estilos para descripciones de las comidas */
+    text-align: center;
+    list-style: none;
+    padding: 10px;
+}
+
+.day-PA { /* Estilos para los días de la semana y sus contenidos */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.day-PA li {
+    flex: 0 1 calc(25% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #9f77cc;
+}
+
+/*================ PLAN ENTRENAMIENTO =======================*/
+section.planTraining{
+    background-color: rgb(216, 232, 250);
+    text-align: center;
+    padding: 2rem;
+}
+
+.containerPT{
+    background-color: rgb(214, 214, 214);
+}
+
+.containerPT h4{ /* Estilos para los días de la semana */
+    color: #411d2b;
+    margin-top: 40px;
+    font-size: 1.3em;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+
+
+.exercise { /* Estilos para los días de la semana y sus contenidos */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+}
+
+.exercise-item{
+    flex: 0 1 calc(25% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #5755d1;    
+}
+
+.exercise-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.exercise-item P {
+    flex: 0 1 calc(25% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #6e2434;
+}
+
+/*================ DAT CORPORALES =======================*/
+section.dat_corp{
+    background-color: rgb(194, 211, 219);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 2rem;
+    flex-direction: column;
+    
+}
+
+/* Estilos para el formulario de datos corporales */
+.dat_corp form {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dat_corp form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.dat_corp form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dat_corp form button {
+    background-color: #a454a5; /* Fondo con el color #D052D2 */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dat_corp form button:hover {
+    background-color: #b445b6; /* Color ligeramente más oscuro al pasar el mouse */
+}
+
+/* Estilos para el resultado de la dieta */
+#dietResults {
+    display: block;
+    
+    margin-top: 20px;
+    background-color: rgb(189, 210, 241);
+    border-color: #795663;
+    border-style: double;
+    padding: 2rem;
+    width: 35%;
+    border-radius: 15%;    
+}
+
+/* Estilos para el botón de suscripción */
+#dietResults a button {
+    background-color: #9a509b; /* Fondo con el color #D052D2 */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#dietResults a button:hover {
+    background-color: #853086; /* Color ligeramente más oscuro al pasar el mouse */
+}
+ /*================COMUNIDAD =======================*/
+/* Estilos generales */
+section.comunity {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Estilos para títulos */
+.comu_container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Estilos para párrafos */
+.comu_container p {
+    font-size: 16px;
+}
+
+/* Estilos para botones */
+.comu-button {
+    background-color: #D052D2; /* Color de fondo del botón */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.comu-button:hover {
+    background-color: #dfdfdf;
+}
+
+/* Estilos para enlaces */
+.comu_container a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.comu_container a:hover {
+    color: #555;
+}
+
+/* Estilos para secciones */
+.comu_container {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos específicos para secciones */
+#introduccion {
+    background-color: #f0f0f0;
+}
+
+#entrenamientos {
+    background-color: #f8f8f8;
+}
+
+#nutricion {
+    background-color: #f0f0f0;
+}
+
+#miembros {
+    background-color: #f8f8f8;
+}
+
+#contacto {
+    background-color: #f0f0f0;
+}
+
+/* Estilos para la sección de publicaciones */
+#publicaciones {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos para el título de la sección */
+#publicaciones h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Estilos para el formulario de publicación */
+#publicacion-form {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#publicacion-text {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#publicacion-form button {
+    background-color: #d252b2; /* Color de fondo del botón de publicación */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#publicacion-form button:hover {
+    background-color: #555;
+}
+
+/* Estilos para las publicaciones */
+.publicacion {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Estilos para los formularios de respuestas */
+.respuesta-form {
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.respuesta-form .respuesta-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.respuesta-form .button {
+    background-color: #D052D2; /* Color de fondo del botón de respuesta */
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.respuesta-form .button:hover {
+    background-color: #555;
+}
+
+/* Estilos para las respuestas */
+.respuesta {
+    background-color: #f0f0f0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+/*================ Registro BD =======================*/
+section.regisBD{
+    background-color: rgb(163, 182, 163);
+    text-align:center;
+    padding: 2rem;
+}
+
+/*================ APP =======================*/
+
+/*SECCIÓN GUIA*/
+.guia{
+    padding:  3rem 0;
+}
+.subGuia{
+    text-align: center;
+    padding-bottom: 2rem;
+    color: #313857;
+}
+.containerG{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(18rem, 1fr));
+    grid-gap: 2rem;
+}
+.boxG{
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 55px 5px rgb(0 0 0 /6%);
+}
+.boxG img{
+    width: 200px;
+}
+h3{
+    color: #4c4c4c;
+    margin: 10px 0;
+}
+.boxG p{
+    text-align: center;
+}
+
+/*SECCIÓN FUNCIONES*/
+.funciones{
+    padding:  3rem 0;
+}
+.subFunciones{
+    text-align: center;
+    padding-bottom: 2rem;
+    color: #313857;
+}
+.containerF{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(18rem, 1fr));
+    grid-gap: 2rem;
+}
+.boxF{
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 55px 5px rgb(0 0 0 /6%);
+}
+.boxF img{
+    width: 200px;
+}
+.boxF h3{
+    color: #4c4c4c;
+    margin: 10px 0;
+}
+.boxF p{
+    text-align: center;
+}
+
