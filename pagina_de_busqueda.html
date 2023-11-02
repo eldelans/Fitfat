@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keyword" content="Ejercicios, rutina, plan de ejercicios, fitness, gimnasio">
+    <meta name="description" content="Plan de Ejercicios Semanal dividido por grupos musculares para mantenerte en forma y saludable">
+    <meta name="author" content="Tu Nombre">
+    <link rel="icon" href="img/hoja.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Plan de Ejercicios Semanal</title>
+
+</head>
+<body>
+    <header></header>
+<body>
+    <section class="busqueda">
+        <h1>Búsqueda en HTML</h1>
+
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Buscar...">
+            <input type="submit" value="Buscar">
+        </form>
+    
+        <div id="results">
+            <!-- Aquí se mostrarán los resultados de la búsqueda -->
+        </div>
+
+
+    </section>
+    
+    
+
+    <script>
+        // Define la estructura de datos para las páginas
+        const pages = [
+            { title: "plan basico", url: "planbasico_contenido.html" },
+            { title: "plan premiun", url: "plan_premiun_pagar.html" },
+            { title: "precios", url: "precios.html" },
+        ];
+
+        const searchForm = document.getElementById('searchForm');
+        const searchInput = document.getElementById('searchInput');
+        const resultsDiv = document.getElementById('results');
+        const searchResults = [];
+
+        searchForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Obtener el término de búsqueda
+            const searchTerm = searchInput.value;
+            searchResults.length = 0; // Limpiar resultados anteriores
+
+            // Realizar la búsqueda en las páginas
+            pages.forEach((page) => {
+                if (page.title.includes(searchTerm)) {
+                    searchResults.push(page);
+                }
+            });
+
+            // Mostrar los resultados
+            displayResults(searchResults);
+        });
+
+        function displayResults(results) {
+            resultsDiv.innerHTML = '<p>Resultados:</p>';
+            const ul = document.createElement('ul');
+            results.forEach((result, index) => {
+                const li = document.createElement('li');
+                const link = document.createElement('a');
+                link.textContent = `Resultado ${index + 1}: ${result.title}`;
+                link.href = result.url;
+                li.appendChild(link);
+                ul.appendChild(li);
+            });
+            resultsDiv.appendChild(ul);
+        }
+    </script>
+    
+    <footer></footer>
+<script src="js/script.js"></script>
+
+</body>
+</html>

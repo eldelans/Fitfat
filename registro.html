@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="keyword" content="">
+	<meta name="description" content="">
+	<meta name="author" content="José Luis Quispe">
+	<meta name="copyright" content="Fitfat S.A.">
+	<link rel="icon" href="img/hoja.ico">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Ticketboost</title>
+</head>
+<body>
+    <header></header>	
+	<section class="registro">
+        <div>
+            <h3>Pertenece a la Familia Tickerboost</h3>	
+            <h2>Datos de registro</h2>
+        </div>
+        <div class="registroImg">
+            <a><img src="img/Registro.png" alt="" width="200"></a>
+        </div>    
+            <h4>Nombre Completos</h4>
+            <input type="text" required="">
+            <h4>Apellidos Completo</h4>
+            <input type="text" required="">
+            <h4>Nombre de usuario</h4>
+            <input type="email" type="number" required="">
+            <h4>Email</h4>
+            <input type="email" required="">
+            <h4>Contraseña</h4>
+            <input type="password" required="">
+            <h4>Repita Contraseña</h4>
+            <input type="password" required="">
+            <h4>Celular</h4>
+            <input type="number" required="">
+            <h4>Dirección*</h4>
+            <input type="Text"><br><br>
+        </div>    
+            <div>
+                <a href="#" class="btnBanner">Enviar Datos</a>
+				<br><br>
+            </div>
+
+            <div>
+                <h2>Subir Imagen de Identificación</h2>
+                <form action="procesar.php" method="post" enctype="multipart/form-data"><!--Si tuvieramos una base de datos-->
+                    <img src="img/subir.jpg" alt="Fitfat" tittle="Fitfat"width="100" height="100"><br>
+                    <label for="imagen">Foto de usuario Fitfat:</label><br>
+                    <input type="file" name="imagen" id="imagen" accept="image/*" required><br>
+                    <input type="submit" value="Subir Imagen">
+                </form>
+            </div>
+        </div>
+    </section>
+	<footer></footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
