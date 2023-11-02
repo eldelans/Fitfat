@@ -36,5 +36,19 @@ footer.innerHTML= `
 <a href="">Tiktok</a><br>
 <p>Contactanos</p>
 987654321
-
 `;
+/*Menu Guia */
+
+guia.addEventListener("click", (g) =>{
+    g.preventDefault();
+    const sectionG =document.querySelector(".guia");
+    sectionG.scrollIntoView({behavior: "smooth"});
+})
+
+/*Menu Funcioens */
+
+funciones.addEventListener("click", (f) =>{
+    f.preventDefault();
+    const sectionF =document.querySelector(".funciones");
+    sectionF.scrollIntoView({behavior: "smooth"});
+})
